@@ -864,7 +864,7 @@ button.mfp-close:hover {
 }
 
 .form-control {
-  box-shadow: none;
+  box-shadow: 0px;
   border-radius: 0px;
 }
 
