@@ -732,6 +732,12 @@ button.mfp-close:hover {
   color: black;
 }
 
+input[type='text'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .customNavigation ul li,
 .input-style input,
 .text-style textarea {
