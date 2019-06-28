@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var api_key = 'key-627740b793b75a68cff483d0f6a2537c';
+var api_key = 'key-1ac86616e09c7ed6eb131d3c9cf8a89a';
 var domain = 'mail.joshlippi.com';
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
