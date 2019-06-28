@@ -155,6 +155,7 @@ section {
   width: 20px;
   height: 2px;
   display: inline-block;
+  color: black;
 }
 
 .lines::after,
@@ -205,6 +206,7 @@ section {
   top: 0;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
+  background-color: black;
 }
 
 .toggle-close .lines::before {
@@ -215,6 +217,7 @@ section {
 .toggle-close .lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
   transform: rotate3d(0, 0, 1, -45deg);
+  background-color: black;
 }
 
 .menu {
@@ -230,6 +233,10 @@ section {
   -moz-transition: ease-out 0.3s;
   -o-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+}
+
+.menuTitle {
+  margin-top: 75px;
 }
 
 .menu .nav,
@@ -251,7 +258,9 @@ section {
 }
 
 .push-content {
-  transform: translateX(200px);
+  /* transform: translateX(200px); */
+  transform: scale(0.9) translate(7.5%, 0%);
+  opacity: 0.5;
 }
 
 .menu .nav {
@@ -284,7 +293,7 @@ section {
 .menu .nav li a {
   background: 0 0;
   padding: 0;
-  color: #8c8c8c;
+  color: black;
   transition: linear 0.1s;
 }
 
@@ -340,6 +349,7 @@ section {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .home-content h1,
@@ -424,7 +434,8 @@ section {
 }
 
 .about {
-  padding-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 25px;
   text-align: center;
 }
 
@@ -651,6 +662,16 @@ button.mfp-close:hover {
   color: #fff;
 }
 
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .services-box div {
   background: white;
   padding: 30px 30px;
@@ -823,7 +844,7 @@ button.mfp-close:hover {
 }
 
 .contact {
-  padding: 100px 0 70px;
+  padding: 25px 0 50px;
   text-align: center;
 }
 

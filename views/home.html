@@ -15,11 +15,6 @@
   <!-- ##### STYLESHEETS ##### -->
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Linea Icons -->
-  <!-- <link href="linea/styles.css" rel="stylesheet"> -->
-  <!-- Owl Carousel -->
-  <link href="css/owl.carousel.min.css" rel="stylesheet">
-  <link href="css/owl.theme.default.min.css" rel="stylesheet">
   <!-- Magnific popup -->
   <link href="css/magnific-popup.min.css" rel="stylesheet">
   <!-- Preloader -->
@@ -36,8 +31,6 @@
 
   <!-- Main styles -->
   <link href="css/style.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -53,23 +46,27 @@
     </span>
   </button>
   <div class="menu">
-    <h3>Josh Lippi
+    <h3 class="menuTitle">Josh Lippi
     </h3>
     <ul class="nav">
       <li class="active">
         <a href="#home">Home
         </a>
       </li>
-      <!-- <li>
-        <a href="#about">About
-        </a>
-      </li> -->
       <li>
         <a href="#portfolio">Music
         </a>
       </li>
       <li>
-        <a href="https://joshlippi.com/merch" target="_blank">Store
+        <a href="#store">Store
+        </a>
+      </li>
+      <li>
+        <a href="#tabs">Tabs
+        </a>
+      </li>
+      <li>
+        <a href="#contact">Contact
         </a>
       </li>
     </ul>
@@ -435,15 +432,22 @@
   </section>
   <!-- end Portfolio -->
   <!-- Services -->
-  <section id="liveSite">
+  <section id="store">
     <div class="container">
       <h1 class="bandcamp-text">
-        <a href="https://joshlippi.com/merch" class="lippiSite" target="_blank">Store</a>
+        <a href="https://joshlippi.com/merch" class="lippiSite" target="_blank">Visit the Store</a>
       </h1>
     </div>
   </section>
   <section id="bandcamp" class="fill">
     <div class="bandcamp-background">
+    </div>
+  </section>
+  <section id="tabs">
+    <div class="container">
+      <h1 class="bandcamp-text">
+        <a href="images/StFrancisTabs.jpg" download="St-Francis-Tabs.jpg" class="lippiSite">Free Download • Sheet Music</a>
+      </h1>
     </div>
   </section>
   <section id="about">
@@ -474,13 +478,22 @@
         <h2 class="section-title">Contact
         </h2>
         <div class="row">
-          <form class="form-horizontal col-sm-6 col-sm-offset-3" id='contactForm' method="post" action="contact" role="form">
+          <form class="form-horizontal col-sm-6 col-sm-offset-3" id='contactForm' method="post" role="form" action="/contact">
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-addon">
                   <i class="fa fa-user"></i>
                 </span>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+                <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name (required)" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-user"></i>
+                </span>
+                <input name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
               </div>
             </div>
 
@@ -489,7 +502,7 @@
                 <span class="input-group-addon">
                   <i class="fa fa-envelope"></i>
                 </span>
-                <input name="email" type="email" class="form-control" id="email" placeholder="E-mail">
+                <input name="email" type="email" class="form-control" id="email" placeholder="E-mail (required)" required>
               </div>
             </div>
 
@@ -498,11 +511,11 @@
                 <span class="input-group-addon">
                   <i class="fa fa-pencil"></i>
                 </span>
-                <textarea name="message" class="form-control" rows="3" placeholder="Message" id="message"></textarea>
+                <textarea name="message" class="form-control" rows="3" placeholder="Message (required)" id="message" required></textarea>
               </div>
             </div>
 
-            <button type="submit" name="submit" class="btn col-sm-4 col-sm-offset-4">
+            <button type="submit" name="submit" class="btn col-sm-4 col-sm-offset-4 submit">
               Send
               <i class="fa fa-paper-plane"></i>
             </button>
@@ -511,6 +524,20 @@
       </div>
     </div>
   </section>
+  <!-- <section id="success">
+    <div class="success">
+      <div class="container">
+        <h1 class="bandcamp-text">Thanks! Message Sent!</h1>
+      </div>
+    </div>
+  </section>
+  <section id="error">
+    <div class="error">
+      <div class="container">
+        <h1 class="bandcamp-text">Whoops...Looks like you missed something!</h1>
+      </div>
+    </div>
+  </section> -->
   <!-- Footer -->
   <footer>
     <div class="footer-background">
@@ -547,11 +574,13 @@
   <!-- end Footer -->
   <!-- ##### JAVASCRIPTS ##### -->
   <!-- jQuery Library -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js">
-  </script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Bootstrap js -->
   <script src="js/bootstrap.min.js">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <!-- Magnific Popup -->
   <script src="js/jquery.magnific-popup.min.js">
   </script>
@@ -560,6 +589,8 @@
   </script>
   <!-- Custom Scripts -->
   <script src="js/scripts.min.js">
+  </script>
+  <script src="js/main.js">
   </script>
 </body>
 

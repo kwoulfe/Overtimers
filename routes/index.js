@@ -1,31 +1,48 @@
 var express = require('express');
 var router = express.Router();
 
-var api_key = '7580080366e79b3898d529291197b57c';
-var domain = 'mail.joshlippi.com';
+var api_key = '';
+var domain = '';
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
+  // req.session.errors = null;
 });
 
-router.post('/contact', function(req, res) {
-  var data = {
-    from: req.body.email,
-    to: 'kevinpwoulfe@gmail.com',
-    subject: 'New Message from ' + req.body.name,
-    text: req.body.message
-  };
+router.post('/contact', function(req, res, next) {
+  req
+    .check('firstName', 'Please enter a name')
+    .isAlpha()
+    .isLength({ min: 2 });
 
-  console.log(data);
+  req.check('email', 'Enter a valid email address').isEmail();
+  req.check('message', 'Enter your message').isLength({ min: 2 });
 
-  mailgun.messages().send(data, function(error, body) {
-    if (error) {
-      console.log(error);
-    }
-    console.log(body);
-  });
+  var errors = req.validationErrors();
+  if (errors) {
+    res.send(errors);
+    // req.session.errors = errors;
+  } else {
+    var data = {
+      from: req.body.email,
+      to: '',
+      subject:
+        'New Message from ' + req.body.firstName + ' ' + req.body.lastName,
+      text: req.body.message
+    };
+
+    console.log(data);
+
+    mailgun.messages().send(data, function(error, body) {
+      if (error) {
+        console.log(error);
+      }
+      console.log(body);
+    });
+    res.send('OK');
+  }
 });
 
 module.exports = router;
