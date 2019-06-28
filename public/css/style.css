@@ -738,6 +738,18 @@ input[type='text'] {
   appearance: none;
 }
 
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .customNavigation ul li,
 .input-style input,
 .text-style textarea {
