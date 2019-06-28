@@ -863,6 +863,15 @@ button.mfp-close:hover {
   text-align: center;
 }
 
+.form-control {
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.input-group-addon {
+  border-radius: 0px;
+}
+
 .input-style {
   width: 100%;
 }
