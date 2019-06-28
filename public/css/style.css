@@ -985,7 +985,15 @@ textarea {
 
 .footer-background {
   background: #3b768a;
-  padding: 50px 30px;
+  padding: 50px 30px 30px 30px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.credits {
+  margin-top: 1.5em;
+}
+
+.credits a {
+  text-decoration: underline;
 }
