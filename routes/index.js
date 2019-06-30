@@ -27,7 +27,7 @@ router.post('/contact', function(req, res, next) {
   } else {
     var data = {
       from: req.body.email,
-      to: 'joe.starkeypm@gmail.com',
+      to: 'truthmusiclabel@gmail.com',
       subject:
         'New Message from ' + req.body.firstName + ' ' + req.body.lastName,
       text: req.body.message
