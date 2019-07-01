@@ -747,7 +747,9 @@ button.mfp-close:hover {
   color: black;
 }
 
-#text a:hover {
+#text a:hover,
+a:active,
+a:focus {
   color: black;
 }
 
