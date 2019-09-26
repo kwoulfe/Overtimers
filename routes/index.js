@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-var api_key = 'key-1ac86616e09c7ed6eb131d3c9cf8a89a';
-var domain = 'mail.joshlippi.com';
+var api_key = '';
+var domain = '';
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index');
   // req.session.errors = null;
 });
 
-router.post('/contact', function(req, res, next) {
+router.post('/contact', function (req, res, next) {
   req
     .check('firstName', 'Please enter a name')
     .isAlpha()
@@ -27,7 +27,7 @@ router.post('/contact', function(req, res, next) {
   } else {
     var data = {
       from: req.body.email,
-      to: 'truthmusiclabel@gmail.com',
+      to: '',
       subject:
         'New Message from ' + req.body.firstName + ' ' + req.body.lastName,
       text: req.body.message
@@ -35,7 +35,7 @@ router.post('/contact', function(req, res, next) {
 
     console.log(data);
 
-    mailgun.messages().send(data, function(error, body) {
+    mailgun.messages().send(data, function (error, body) {
       if (error) {
         console.log(error);
       }
