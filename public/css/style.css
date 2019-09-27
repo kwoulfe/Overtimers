@@ -361,7 +361,7 @@ section {
 }
 
 .home-background {
-  background: url(../images/background.jpg) center center no-repeat;
+  /* background: url(../images/livingRoom.jpg) center center no-repeat; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -702,6 +702,30 @@ button.mfp-close:hover {
   color: #3b768a;
 }
 
+#spotify {
+  color: rgb(92, 177, 111);
+}
+
+#itunes {
+  color: rgb(235, 43, 43);
+}
+
+#instagram {
+  color: rgb(100, 67, 30);
+}
+
+#youtube {
+  color: rgb(219, 216, 6);
+}
+
+#twitter {
+  color: #ff5f8f;
+}
+
+#facebook {
+  color: rgb(5, 3, 139);
+}
+
 .services-box h4 {
   margin: 15px 0 0;
   color: #fff;
@@ -717,7 +741,7 @@ button.mfp-close:hover {
 }
 
 .bandcamp-background {
-  background: url(../images/bandcamp-background.jpg) center center no-repeat;
+  background: url(../images/hannahPic.JPG) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -1005,7 +1029,7 @@ textarea {
 }
 
 .footer-background {
-  background: #3b768a;
+  background: #ff5f8f;
   padding: 50px 30px 30px 30px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
