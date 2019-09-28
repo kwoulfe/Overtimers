@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var api_key = 'key-7f8c18e174f5a420896dd4c2d4c7b6cc';
-var domain = 'mail.joshlippi.com';
+var api_key = '';
+var domain = '';
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 /* GET home page. */
@@ -27,7 +27,7 @@ router.post('/contact', function (req, res, next) {
   } else {
     var data = {
       from: req.body.email,
-      to: 'truthmusiclabel@gmail.com',
+      to: '',
       subject:
         'New Message from ' + req.body.firstName + ' ' + req.body.lastName,
       text: req.body.message
