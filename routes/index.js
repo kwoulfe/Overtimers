@@ -2,11 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var api_key = '';
-<<<<<<< HEAD
 var domain = 'mail.joshlippi.com';
-=======
-var domain = '';
->>>>>>> 7e7826df6916cdb2bb6a12bbeca1b9a2b8c4ec72
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 /* GET home page. */
