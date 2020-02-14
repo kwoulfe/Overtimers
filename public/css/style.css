@@ -348,11 +348,11 @@ section {
   position: relative;
   height: 100%;
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
   width: 100%;
-  max-width: 1440px;
+  max-width: 2560px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .home-content h1,
@@ -361,7 +361,7 @@ section {
 }
 
 .home-background {
-  /* background: url(../images/livingRoom.jpg) center center no-repeat; */
+  background: url(../images/floatOn.jpg) bottom right no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -428,7 +428,7 @@ section {
 }
 
 .portfolio-background {
-  padding: 70px 0 2px;
+  padding: 50px 0 2px;
   text-align: center;
 }
 
@@ -703,27 +703,27 @@ button.mfp-close:hover {
 }
 
 #spotify {
-  color: rgb(92, 177, 111);
+  color: #E66536;
 }
 
 #itunes {
-  color: rgb(235, 43, 43);
+  color: #56B9D6;
 }
 
 #instagram {
-  color: rgb(100, 67, 30);
+  color: #609D4D;
 }
 
 #youtube {
-  color: rgb(219, 216, 6);
+  color: #E66536;
 }
 
 #twitter {
-  color: #ff5f8f;
+  color: #56B9D6;
 }
 
 #facebook {
-  color: rgb(5, 3, 139);
+  color: #609D4D;
 }
 
 .services-box h4 {
@@ -1029,7 +1029,7 @@ textarea {
 }
 
 .footer-background {
-  background: #ff5f8f;
+  background: rgb(0, 0, 0);
   padding: 50px 30px 30px 30px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
